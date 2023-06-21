@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<title> convert to binary</title>
+<meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+ body{
+    background-color:#4a5c50;
+    background-image:url("https://wallpaperaccess.com/full/109666.jpg");
+    background-blend-mode:screen;
+    background-size: cover;
+
+ }
+ #input1{
+    position: absolute;
+    right:40%;
+    bottom: 65%;
+    border:4px solid rgb(22, 95, 34);
+    color:rgb(3, 102, 19);
+    background-color: rgb(170, 163, 163);
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    padding-left: 45px;
+    font-size: medium;
+    font-weight: bold;
+    z-index: 1;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGEVginVtzklmo7h80I36gP_Vzl-l5t4GCSQ&usqp=CAU");
+    background-position: left;
+    background-position-x: 7px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+ }
+::-webkit-input-placeholder{
+    color:rgb(3, 102, 19);font-weight: bold;
+}
+#buttonoutput{
+    position: absolute;
+    right:37%;
+    bottom: 30%;
+    background-color: rgb(170, 163, 163);
+    height: 43px;
+    width: 350px;
+    z-index: 1;
+    border:4px solid rgb(22, 95, 34);
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    color:rgb(3, 102, 19);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHm1BnsLdnY0XYUuAadPoAccPS7dH0xrwJvw&usqp=CAU");
+    background-position: left;
+    background-position-x: 10px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+
+</style>
+<script type="text/javascript" lang="javascript">
+function binaryfunction(){
+num=document.getElementById("input1").value;
+q=num
+binaire=0
+while(q!=0){
+  r=q%2
+  q=(q-q%2)/2;
+  binaire=r.toString()+binaire
+  }
+  binaire/=10
+  document.getElementById("output").value=binaire
+}
+</script>
+</head>
+<body>
+<input name="userinput" placeholder="type a decimal number" id="input1" oninput="binaryfunction()"/>
+<button id="buttonoutput"><output name="answer"  id="output"> here is your binary code</output></button>
+
+
+
+</body>
